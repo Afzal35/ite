@@ -58,3 +58,53 @@ for(var i=0; i<odd.length; i++)
     odd[i].style.backgroundColor='#f4f4f4';
     even[i].style.backgroundColor= '#ccc';
 }
+var itemList = document.querySelectorAll('#items');
+console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor ='#f4f4f4';
+console.log(itemList.parentNode.parentNode);
+
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor ='#f4f4f4';
+console.log(itemList.parentElement.parentElement);
+
+console.log(itemList.childNodes);
+
+console.log(itemList.children);
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor = 'Blue';
+
+console.log(itemList.firstChild);
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent = 'Hello 1';
+
+console.log(itemList.lastChild);
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent = 'Hello 4';
+
+console.log(itemList.nextSibling);
+console.log(itemList.nextElementSibling);
+
+console.log(itemList.previousSibling);
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = 'yellow';
+
+var newDiv = document.createElement('div');
+
+newDiv.className = 'hello';
+
+newDiv.id = 'hello 1';
+
+newDiv.setAttribute('title', 'Helllo Div');
+
+var newDivText = document.createTextNode('Hello World');
+
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+newDiv.style.fontSize ='39px';
+
+container.insertBefore(newDiv, h1);
